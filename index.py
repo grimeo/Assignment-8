@@ -29,18 +29,20 @@ def generateNumbers():
 
 # print the randoms (optional)
 def printRandoms():
-    print("Winning #1: " + str(n1) + "\nWinning #1: " + str(n2) +"\nWinning #1: " + str(n3))
+    print("\nWinning #1: " + str(n1) + "\nWinning #1: " + str(n2) +"\nWinning #1: " + str(n3) + "\n")
 
 def askToPlayAgain():
-    playAgain = str(input("Try again? Y/N"))
+    playAgain = str(input("\nTry again? Y/N: \n"))
     
     if playAgain.casefold() == "y":
-        #play again
-        print("play again")
-    if  playAgain.casefold() == "n":
+        print("\n")
+        play()
+    elif  playAgain.casefold() == "n":
         # stop the program
-        print("stop")
-
+        print()
+    else: 
+        askToPlayAgain()
+    
 
 # check if the player won and if he want to play again
 def checkIfMatched():
@@ -55,11 +57,19 @@ def checkIfMatched():
     else:
         print("You loss")
         
+# main game
+def play():
+    askForInputs()
+    generateNumbers()
+    printRandoms()
+    checkIfMatched()
+    askToPlayAgain()
+
+play()
+
+print("\nEnd of Program 1! \nWelcome to Program 2!\n")
 
 
-# --- main ---
-
-    
 
 # Program 2: Guess the number
 # Generate 1 random number (0-100)
