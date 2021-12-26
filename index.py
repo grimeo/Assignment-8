@@ -17,7 +17,22 @@ num1 = str(input("Type the 1st number: "))
 num2 = str(input("Type the 2nd number: "))
 num3 = str(input("Type the 3rd number: "))
 
+# random numbers
+n1 = random.randint(0,9)
+n2 = random.randint(0,9)
+n3 = random.randint(0,9)
 
+if num1 == n1:
+    if num2 == n2:
+        if num3 == n3:
+            print("Winner")
+        else:
+            print("You loss")
+    else:
+        print("You loss")
+else:
+    print("You loss")
+    
 
 # Program 2: Guess the number
 # Generate 1 random number (0-100)
