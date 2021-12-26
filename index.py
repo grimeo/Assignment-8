@@ -22,6 +22,9 @@ n1 = random.randint(0,9)
 n2 = random.randint(0,9)
 n3 = random.randint(0,9)
 
+# print the randoms (optional)
+print("Winning #1: " + str(n1) + "\nWinning #1: " + str(n2) +"\nWinning #1: " + str(n3))
+
 if num1 == n1:
     if num2 == n2:
         if num3 == n3:
