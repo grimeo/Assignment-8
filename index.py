@@ -91,9 +91,14 @@ def check():
     if guestNumber > randomNumber:
         print("Greater than")
         askForInput()
+        check()
     elif guestNumber < randomNumber:
         print("Less than")
         askForInput()
+        check()
     elif guestNumber == randomNumber:
         print("Random number has been guessed correctly.")
 
+askForInput()
+genRand()
+check()
