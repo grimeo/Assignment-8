@@ -8,12 +8,16 @@
 # If the user enter “y” the user will play again
 # if “n” the program will exit.
 
+import random
 
 print("Welcome to program 1 of Assignment 8!\n")
+print("Program 1: Lottery\n")
 
 num1 = str(input("Type the 1st number: "))
 num2 = str(input("Type the 2nd number: "))
 num3 = str(input("Type the 3rd number: "))
+
+
 
 # Program 2: Guess the number
 # Generate 1 random number (0-100)
