@@ -16,6 +16,7 @@ print("Program 1: Lottery\n")
 # user input
 def askForInputs():
     global num1, num2, num3
+    print("Guest the number from 0-9.")
     num1 = str(input("Type the 1st number: "))
     num2 = str(input("Type the 2nd number: "))
     num3 = str(input("Type the 3rd number: "))
@@ -69,11 +70,18 @@ play()
 
 print("\nEnd of Program 1! \nWelcome to Program 2!\n")
 
-
-
 # Program 2: Guess the number
 # Generate 1 random number (0-100)
 
 # Ask the user to guess the number
 # Display “Greater than” if the inputed number is greater than the random number Display “Less than” 
 # if the inputed number is less than the random number Repeat asking the user until the random number has been guessed correctly.
+
+def askForInput():
+    global guest
+    guest = int(input("Guest the number from 0-100: "))
+
+# generate random int
+def genRand():
+    global randomNumber
+    randomNumber = random.randint(0,100)
