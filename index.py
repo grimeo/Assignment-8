@@ -77,11 +77,23 @@ print("\nEnd of Program 1! \nWelcome to Program 2!\n")
 # Display “Greater than” if the inputed number is greater than the random number Display “Less than” 
 # if the inputed number is less than the random number Repeat asking the user until the random number has been guessed correctly.
 
+
 def askForInput():
-    global guest
-    guest = int(input("Guest the number from 0-100: "))
+    global guestNumber
+    guestNumber = int(input("Guest the number from 0-100: "))
 
 # generate random int
 def genRand():
     global randomNumber
     randomNumber = random.randint(0,100)
+
+def check():
+    if guestNumber > randomNumber:
+        print("Greater than")
+        askForInput()
+    elif guestNumber < randomNumber:
+        print("Less than")
+        askForInput()
+    elif guestNumber == randomNumber:
+        print("Random number has been guessed correctly.")
+
