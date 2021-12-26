@@ -13,28 +13,52 @@ import random
 print("Welcome to program 1 of Assignment 8!\n")
 print("Program 1: Lottery\n")
 
-num1 = str(input("Type the 1st number: "))
-num2 = str(input("Type the 2nd number: "))
-num3 = str(input("Type the 3rd number: "))
+# user input
+def askForInputs():
+    global num1, num2, num3
+    num1 = str(input("Type the 1st number: "))
+    num2 = str(input("Type the 2nd number: "))
+    num3 = str(input("Type the 3rd number: "))
 
 # random numbers
-n1 = random.randint(0,9)
-n2 = random.randint(0,9)
-n3 = random.randint(0,9)
+def generateNumbers():
+    global n1, n2, n3
+    n1 = random.randint(0,9)
+    n2 = random.randint(0,9)
+    n3 = random.randint(0,9)
 
 # print the randoms (optional)
-print("Winning #1: " + str(n1) + "\nWinning #1: " + str(n2) +"\nWinning #1: " + str(n3))
+def printRandoms():
+    print("Winning #1: " + str(n1) + "\nWinning #1: " + str(n2) +"\nWinning #1: " + str(n3))
 
-if num1 == n1:
-    if num2 == n2:
-        if num3 == n3:
-            print("Winner")
+def askToPlayAgain():
+    playAgain = str(input("Try again? Y/N"))
+    
+    if playAgain.casefold() == "y":
+        #play again
+        print("play again")
+    if  playAgain.casefold() == "n":
+        # stop the program
+        print("stop")
+
+
+# check if the player won and if he want to play again
+def checkIfMatched():
+    if num1 == n1:
+        if num2 == n2:
+            if num3 == n3:
+                print("Winner")
+            else:
+                print("You loss")
         else:
             print("You loss")
     else:
         print("You loss")
-else:
-    print("You loss")
+        
+
+
+# --- main ---
+
     
 
 # Program 2: Guess the number
